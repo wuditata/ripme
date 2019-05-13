@@ -145,6 +145,7 @@ public final class MainWindow implements Runnable, RipStatusHandler {
 
     // All the langs ripme has been translated into
     private static String[] supportedLanges = new String[] {
+            "zh_CN",
             "de_DE",
             "ar_AR",
             "en_US",
@@ -305,8 +306,8 @@ public final class MainWindow implements Runnable, RipStatusHandler {
         ripTextfield = new JTextField("", 20);
         ripTextfield.addMouseListener(new ContextMenuMouseListener());
         ImageIcon ripIcon = new ImageIcon(mainIcon);
-        ripButton = new JButton("<html><font size=\"5\"><b>Rip</b></font></html>", ripIcon);
-        stopButton = new JButton("<html><font size=\"5\"><b>Stop</b></font></html>");
+        ripButton = new JButton("", ripIcon);
+        stopButton = new JButton("");
         stopButton.setEnabled(false);
         try {
             Image stopIcon = ImageIO.read(getClass().getClassLoader().getResource("stop.png"));
